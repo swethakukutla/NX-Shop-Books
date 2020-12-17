@@ -1,0 +1,8 @@
+<div *ngFor="let book of cartBooks$ | async">
+  <shopping-books-book-list
+      [book]="book" [pageSelector]="'cart'" (emitSelectedBookId) = "removeFromCart($event)"
+    ></shopping-books-book-list>
+  <button mat-flat-button color="accent" (click)="goToBillingPage()">Proceed to buy</button>
+</div>
+
+

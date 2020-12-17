@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ book.title }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{ book.imageLinks?.smallThumbnail }}" />
+  <mat-card-content>
+    <p>
+      {{ book.description }}
+    </p>
+    <p>Written By:</p>
+    <p>
+      {{ book.publisher }}
+      <i
+        *ngIf="pageSelector === 'cart'"
+        class="material-icons"
+        (click)="selectedBookId(book.id)"
+        >remove_shopping_cart</i
+      >
+    </p>
+    <div *ngIf="pageSelector === 'collection'">
+      <p><b>Billing Address</b></p>
+      <p>Name: {{ book.billingData.name }}</p>
+      <p>Email: {{ book.billingData.email }}</p>
+      <p>Phone: {{ book.billingData.phone }}</p>
+      <p>Address: {{ book.billingData.address }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>

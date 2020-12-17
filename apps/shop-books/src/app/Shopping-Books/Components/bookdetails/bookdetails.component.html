@@ -1,0 +1,23 @@
+<mat-card *ngIf="selectedBook">
+  <mat-card-header>
+    <mat-card-title>{{selectedBook.title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{selectedBook.imageLinks?.smallThumbnail}}">
+  <div>
+     <p>Rating: {{selectedBook.averageRating}}</p>
+      <p>Publisher: {{selectedBook.publisher}}</p>
+      <p>Page Count: {{selectedBook.pageCount}}</p>
+      <p>Language: {{selectedBook.language}}</p>
+  </div>
+  <mat-card-content>
+    <p>
+      {{selectedBook.description}}
+    </p>
+    <p>Written By: </p>
+    <p>{{selectedBook.publisher}}</p>
+  </mat-card-content>
+</mat-card>
+
+<button mat-flat-button color="accent" (click)='addToCart()'>ADD TO CART</button>
+<button mat-flat-button color="accent" (click)='goToBillingPage()'>BUY</button>
+

@@ -1,0 +1,8 @@
+<div *ngFor="let book of collectionBooks$ | async">
+  <shopping-books-book-list [pageSelector]="'collection'"
+      [book]="book"
+  ></shopping-books-book-list>
+</div>
+
+
+

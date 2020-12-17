@@ -1,0 +1,12 @@
+.mat-card-image {
+  width: calc(10% + 32px) !important;
+  margin: 0;
+  float: right;
+}
+
+mat-card-content > p {
+  clear: both;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

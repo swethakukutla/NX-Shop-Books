@@ -1,0 +1,47 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* .example-full-width {
+  width: 100%;
+} */
+
+
+.searchIcon{
+  float: right !important;
+}
+
+.mat-card-image {
+  width: calc(10% + 32px) !important;
+  margin: 0;
+  float: right;
+}
+
+mat-card-content > p {
+  clear: both;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.content {
+  padding: 16px;
+  margin: 0 !important;
+}
+
+mat-card {
+  width: 300px !important;
+}
+
+.search-content {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+
+.material-icons {
+  float: right !important;
+  color: red !important;
+}

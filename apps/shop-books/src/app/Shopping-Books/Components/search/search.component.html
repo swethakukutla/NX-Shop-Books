@@ -1,0 +1,18 @@
+<div class="search-content">
+  <mat-form-field class="example-full-width">
+    <mat-label>search in library</mat-label>
+    <input matInput #bookname placeholder="" value="" />
+    <i class="material-icons searchIcon" (click)="getBooks(bookname.value)"
+      >search</i
+    >
+  </mat-form-field>
+</div>
+
+<div class="content" fxLayout="row wrap" fxLayoutGap="20px grid">
+  <div *ngFor="let book of loadedBooks$ | async">
+    <shopping-books-book-list
+      [book]="book" [pageSelector]="'search'"
+      (click)="onBookSelected(book.id)"
+    ></shopping-books-book-list>
+  </div>
+</div>

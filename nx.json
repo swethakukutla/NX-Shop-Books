@@ -22,5 +22,16 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "api": {
+      "tags": []
+    },
+    "shop-books": {
+      "tags": []
+    },
+    "shop-books-e2e": {
+      "tags": [],
+      "implicitDependencies": ["shop-books"]
+    }
+  }
 }
